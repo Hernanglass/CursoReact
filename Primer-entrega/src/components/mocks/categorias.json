@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "category": "Proteinas"
+    },
+
+    {
+        "id": 2,
+        "category": "Anabolicos"
+    },
+
+    { 
+        "id": 3,
+        "category": "Accesorios"
+    }
+]

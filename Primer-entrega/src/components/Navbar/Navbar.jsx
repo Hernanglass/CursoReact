@@ -1,24 +1,38 @@
 import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import './Navbar.css';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (<AppBar>
         <Toolbar className='toolbar-navbar' sx={{display: "flex", justifyContent: "space-evenly"}}>
+           
+           <NavLink className="navbar-link" to="/">
             <Typography sx={{color: "white"}}>
-                JULI PORCELANA
+                FITNESS WORLD
             </Typography>
-            <Button sx={{color: 'white'}}>
+           </NavLink>
+
+            <NavLink className="navbar-link" to="/">
+            <Typography sx={{color: 'white'}}>
                 Inicio
-            </Button>
+            </Typography>
+            
+           </NavLink>
 
-            <Button sx={{color: 'white'}}>
+            <NavLink className="navbar-link" to="/products">
+            <Typography sx={{color: 'white'}}>
                 Productos
-            </Button>
+            </Typography>
+            
+           </NavLink>
 
-            <Button sx={{color: 'white'}}>
-               Contacto 
-            </Button>
+            <NavLink className="navbar-link" to="/category">
+            <Typography sx={{color: 'white'}}>
+               Categorias
+            </Typography>
+            </NavLink>
+            
             <CartWidget />
 
         </Toolbar>

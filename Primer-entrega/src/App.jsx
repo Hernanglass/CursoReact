@@ -3,14 +3,27 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import Categories from './components/categories/categories'
+import ProductList from './components/products/ProductList'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import CategoriesProductList from './components/Categories/CategoriesProductList'
+import './style.css'
+
+
 
 function App() {
-const greeting="Bienvenidos a Juli Porcelana"
+
   return (
     <>
-      <Navbar />
-      <ItemListContainer greeting={greeting} />
+    <Router>
+    <Navbar />
+    <Routes>
+      <Route exact path='/' element={<Categories/>} />
+      <Route exact path="/products" element={<ProductList />} />
+      <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
+    </Routes>
+    </Router>
+
     </>
   )
 }
