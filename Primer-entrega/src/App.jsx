@@ -8,6 +8,7 @@ import ProductList from './components/products/ProductList'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import CategoriesProductList from './components/Categories/CategoriesProductList'
 import './style.css'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 
@@ -17,13 +18,13 @@ function App() {
     <>
     <Router>
     <Navbar />
+    <ItemListContainer greeting={'Bienvenidos'} />
     <Routes>
       <Route exact path='/' element={<Categories/>} />
       <Route exact path="/products" element={<ProductList />} />
       <Route exact path="/category/:categoryId" element={<CategoriesProductList />} />
     </Routes>
     </Router>
-
     </>
   )
 }
